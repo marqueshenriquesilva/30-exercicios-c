@@ -48,10 +48,12 @@ int MatrizMaximo(int *mat, int m, int n)
     for (i = 0; i < m; i++)
     {
         k = i * n;
-        for (j = 0; j < n; j++)
+        j = 0;
+        while (j < n)
         {
             if (mat[k + j] > max)
                 max = mat[k + j];
+            j++;
         }
     }
     return max;
